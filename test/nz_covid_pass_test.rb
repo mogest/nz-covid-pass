@@ -10,6 +10,7 @@ class TestCovidPasses < Test::Unit::TestCase
     assert_equal("Jack", covid_pass.given_name)
     assert_equal("Sparrow", covid_pass.family_name)
     assert_equal("1960-04-16", covid_pass.dob.to_s)
+    assert_equal("2031-11-02T20:05:30+00:00", covid_pass.expiry.to_s)
     assert_equal("urn:uuid:60a4f54d-4e30-4332-be33-ad78b1eafa4b", covid_pass.jti)
   end
 

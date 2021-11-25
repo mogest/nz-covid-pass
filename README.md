@@ -13,6 +13,7 @@ Reads NZ COVID Pass passes, validates them, and lets you look at the data inside
   puts covid_pass.given_name
   puts covid_pass.family_name # note: can be nil
   puts covid_pass.dob
+  puts covid_pass.expiry
 ```
 
 If there's a problem with the pass, you'll get an exception raised:
@@ -32,7 +33,7 @@ If you want to try out the test COVID Passes, you'll need to enable the test opt
   covid_pass = NZCovidPass.new(test_code, allow_test_issuers: true)
 ```
 
-This gem requires network access to fetch the public key for validation.  If
+This gem requires network access to fetch the public key for validation. If
 you don't have network access, or you're going to be validating lots of passes,
 you can pass in a cache hash:
 

@@ -65,6 +65,10 @@ class NZCovidPass
     credential_subject["dob"] && Date.parse(credential_subject["dob"])
   end
 
+  def expiry
+    Time.at(cwt.exp).utc.to_datetime
+  end
+
   def jti
     cti = cwt.cti
     if cti.length == 16
