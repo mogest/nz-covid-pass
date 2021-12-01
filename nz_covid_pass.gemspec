@@ -15,4 +15,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'cbor', '~> 0.5.9.6'
   s.add_runtime_dependency 'cwt', '~> 0.5.0'
   s.add_runtime_dependency 'jwt', '~> 2.3.0'
+
+  s.add_development_dependency 'test-unit', '~> 3.5.1'
 end
